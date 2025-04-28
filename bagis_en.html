@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Dominion of States</title> <!-- New Title -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar Menu - Added Donate link -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <img src="https://r.resimlink.com/N45sRPruzk8.png" alt="Dominion of States Logo" id="site-logo">
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="hakkinda_en.html">▶ ABOUT THE GAME</a></li>
+                    <li><a href="sss_en.html">▶ FREQUENTLY ASKED QUESTIONS</a></li>
+                    <li><a href="gelistirici_en.html">▶ DEVELOPER</a></li>
+                    <li><a href="haberler_en.html">▶ NEWS</a></li>
+                    <li><a href="bagis_en.html">▶ DONATE</a></li> <!-- NEW LINK -->
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <span>v: 1.0</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area - Donation Section -->
+        <main class="content">
+            <header class="content-header">
+         
+            <div class="breadcrumbs">
+              <a href="index_en.html">Home</a> / Donation Section
+            </div>
+            
+   <div class="language-switcher">
+     <a href="bagis.html">TR</a> | <span>EN</span>
+   </div>
+          </header>
+          
+          <h1>Donation Section</h1>
+          
+          <!-- Main Box for Both Options -->
+          <div class="donate-options">
+            
+            <!-- Turkey Option -->
+            <div class="donate-option">
+              
+            
+            <!-- Global Option -->
+            <div class="donate-option">
+              <h3>Donation Method for Global:</h3>
+              <button class="donate-button" onclick="toggleDetails('global-details')">Click for Details</button>
+              <div id="global-details" class="donation-details" style="display: none;">
+                <h4>Support Dominion of States - Help an Indie Strategy Game Grow!</h4>
+                <p>Hello everyone!<br>
+                  I'm the sole developer of Dominion of States, a grand historical strategy game made with passion and dedication.</p>
+                <p>If you'd like to support the development and help me continue, you can donate using USDT (Tether) via the TRC20 network:</p>
+                <blockquote>
+                  <strong>USDT (TRC20) Wallet Address:</strong><br>
+                  <span class="wallet-address">TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g</span>
+                  <button class="copy-button" onclick="copyAddress('TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g')">Copy Address</button>
+                </blockquote>
+                <p><small>(Please double-check that the network is TRC20 before sending)</small></p>
+                <p><strong>Why are we using USDT instead of PayPal or Stripe?</strong><br>
+                  Because I live in Turkey and unfortunately can't use PayPal or Stripe. So I found this as an alternative solution. Thank you for your understanding.</p>
+                <p>Even a small donation helps a lot and motivates me to keep working on the game.<br>
+                  Thank you so much for your support!</p>
+                <p>- Fatihilecs</p>
+              </div>
+            </div>
+            
+          </div> <!-- .donate-options end -->
+          
+          <p style="margin-top: 30px; text-align: center; font-size: 0.9em; color: #aaa;">
+            Thank you for supporting the development of Dominion of States! Click the related button for details.
+          </p>
+          
+        </main>
+
+    </div> <!-- .container end -->
+    </div> <!-- .container end -->
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDetails(id) {
+            var allDetails = document.querySelectorAll('.donation-details');
+            var targetDetails = document.getElementById(id);
+
+            allDetails.forEach(function(details) {
+                if (details.id !== id) {
+                    details.style.display = 'none';
+                }
+            });
+
+            if (targetDetails.style.display === 'none' || targetDetails.style.display === '') {
+                targetDetails.style.display = 'block';
+            } else {
+                targetDetails.style.display = 'none';
+            }
+        }
+
+        function copyAddress(address) {
+            navigator.clipboard.writeText(address).then(function() {
+                alert('Wallet address copied to clipboard!');
+            }, function(err) {
+                console.error('Failed to copy address: ', err);
+                alert('Failed to copy address. Please copy it manually.');
+            });
+        }
+        // Orijinal Türkçe:
+// alert('Cüzdan adresi panoya kopyalandı!');
+// alert('Adres kopyalanamadı. Lütfen manuel olarak kopyalayın.');
+
+    </script>
+
+</body>
+</html>

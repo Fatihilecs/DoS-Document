@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bağış Yap - Dominion of States</title>
+    <link rel="stylesheet" href="style.css"> <!-- BU SATIRI KONTROL ET -->
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sol Menü (Sidebar) -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <img src="https://r.resimlink.com/N45sRPruzk8.png" alt="Dominion of States Logosu" id="site-logo">
+            </div>
+            
+            <nav class="navigation">
+                <ul>
+                    <li><a href="hakkinda.html">▶ HAKKINDA</a></li>
+                    <li><a href="sss.html">▶ SIKÇA SORULAN SORULAR</a></li>
+                    <li><a href="gelistirici.html">▶ GELİŞTİRİCİ</a></li>
+                    <li><a href="haberler.html">▶ HABERLER</a></li>
+                    <li><a href="bagis.html">▶ BAĞIŞ YAP</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <span>v: 1.0</span>
+            </div>
+        </aside>
+
+        <!-- Sağ İçerik Alanı - Bağış Bölümü İçeriği -->
+        <main class="content">
+            <header class="content-header">
+                <div class="breadcrumbs">
+                    <a href="index.html">Ana Sayfa</a> / Bağış Bölümü
+                </div>
+                 <!-- Dil Değiştirici -->
+                <div class="language-switcher">
+                    <span>TR</span> | <a href="bagis_en.html">EN</a>
+                </div>
+            </header>
+
+            <h1>Bağış Bölümü</h1>
+
+            <!-- İki Seçenek İçin Ana Kutu -->
+            <div class="donate-options">
+
+                <!-- Türkiye Seçeneği -->
+                <div class="donate-option">
+                    <h3>Türkiye İçin Bağış Yapma Yöntemi:</h3>
+                    <button class="donate-button" onclick="toggleDetails('turkiye-details')">Detaylar İçin Tıkla</button>
+                    <div id="turkiye-details" class="donation-details" style="display: none;">
+                        <h4>Dominion of States'e Destek Ol!</h4>
+                        <p>
+                            Bağımsız olarak geliştirilen strateji oyunu Dominion of States için desteğinizi göstermek isterseniz, aşağıdaki Papara numarasına bağış yapabilirsiniz:
+                        </p>
+                        <blockquote>
+                            <strong>Papara Numarası:</strong><br>
+                            <span class="wallet-address">2076300064</span>
+                            <button class="copy-button" onclick="copyAddress('2076300064')">Numarayı Kopyala</button>
+                        </blockquote>
+                        <p>
+                            <strong>Açıklama:</strong> Destek – Dominion of States
+                        </p>
+                        <p>
+                            Yapacağınız en küçük katkı bile oyunun gelişimine büyük destek olur. Teşekkür ederim!
+                        </p>
+                        <p>— Fatihilecs</p>
+                    </div>
+                </div>
+
+                <!-- Global Seçeneği -->
+                <div class="donate-option">
+                    <h3>Global İçin Bağış Yapma Yöntemi:</h3>
+                    <button class="donate-button" onclick="toggleDetails('global-details')">Detaylar İçin Tıkla</button>
+                    <div id="global-details" class="donation-details" style="display: none;">
+                        <h4>Dominion of States'i Destekleyin - Bağımsız Bir Strateji Oyununun Büyümesine Yardımcı Olun!</h4>
+                        <p>Herkese merhaba!<br>
+                        Tutku ve özveri ile yapılmış tarihi bir büyük strateji oyunu olan Dominion of States'in tek geliştiricisiyim.</p>
+                        <p>Oyunun gelişimini desteklemek ve devam etmeme yardımcı olmak isterseniz, TRC20 ağı üzerinden USDT (Tether) kullanarak bağışta bulunabilirsiniz:</p>
+                        <blockquote>
+                            <strong>USDT (TRC20) Cüzdan Adresi:</strong><br>
+                            <span class="wallet-address">TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g</span>
+                            <button class="copy-button" onclick="copyAddress('TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g')">Adresi Kopyala</button>
+                        </blockquote>
+                        <p><small>(Lütfen göndermeden önce ağın TRC20 olduğunu iki kez kontrol edin)</small></p>
+                        <p><strong>Peki Neden USDT üzerinden bağış yapıyoruz? paypal veya stripe gibi bağış yöntemleri varken?</strong><br>
+                        çünkü paypal ve stripe'ı yaşadığım ülke olan türkiyeden kullanamıyorum. çözüm yolu olarak bu yöntemi buldum. şimdiden anlayışın için teşşekür ederim.</p>
+                        <p>Küçük bir bağış bile çok yardımcı oluyor ve oyunu geliştirmeye devam etmem için beni motive ediyor.<br>
+                        Desteğiniz için çok teşekkürler!</p>
+                        <p>- Fatihilecs</p>
+                    </div>
+                </div>
+
+            </div> <!-- .donate-options sonu -->
+
+            <p style="margin-top: 30px; text-align: center; font-size: 0.9em; color: #aaa;">
+                Dominion of States'in gelişimini desteklediğiniz için teşekkür ederiz! Detaylar için ilgili butona tıklayınız.
+            </p>
+
+        </main>
+
+        <!-- Script bölümü -->
+        <script>
+            function toggleDetails(id) {
+                var allDetails = document.querySelectorAll('.donation-details');
+                var targetDetails = document.getElementById(id);
+                allDetails.forEach(function(details) {
+                    if (details.id !== id) {
+                        details.style.display = 'none';
+                    }
+                });
+                if (targetDetails.style.display === 'none' || targetDetails.style.display === '') {
+                    targetDetails.style.display = 'block';
+                } else {
+                    targetDetails.style.display = 'none';
+                }
+            }
+
+            function copyAddress(address) {
+                navigator.clipboard.writeText(address).then(function() {
+                    alert('Bilgi panoya kopyalandı!');
+                }, function(err) {
+                    console.error('Bilgi kopyalanamadı: ', err);
+                    alert('Bilgi kopyalanamadı. Lütfen manuel olarak kopyalayın.');
+                });
+            }
+        </script>
+
+    </div> <!-- .container sonu -->
+
+</body>
+</html>
