@@ -100,6 +100,7 @@ body {
 
 .navigation ul {
     list-style: none;
+    list-style-type: none;
 }
 
 .navigation li {
