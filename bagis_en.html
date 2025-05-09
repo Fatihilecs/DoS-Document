@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Dominion of States</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Left Menu (Sidebar) -->
+        <aside class="sidebar">
+<!-- ADD THIS SECTION -->
+        <div class="logo-area">
+            <img src="https://r.resimlink.com/yjsxOhnqfew.png" alt="Dominion of States Logo" id="site-logo">
+    <!-- If you want to add "Documentation" under the logo, insert <p class="sidebar-subtitle">Documentation</p> here -->
+        </div>
+<!-- / ADD THIS SECTION -->
+
+            <nav class="navigation">
+                <ul>
+                    <li><a href="hakkinda_en.html">▶ ABOUT THE GAME</a></li>
+<li><a href="sss_en.html">▶ FREQUENTLY ASKED QUESTIONS</a></li>
+<li><a href="gelistirici_en.html">▶ DEVELOPER</a></li>
+<li><a href="haberler_en.html">▶ NEWS</a></li>
+<li><a href="bagis_en.html">▶ DONATE</a></li>
+<li><a href="guncelleme_en.html">▶ UPDATES</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <span>v: 1.1</span>
+            </div>
+        </aside>
+        <!-- / Left Menu (Sidebar) -->
+
+        <!-- Right Content Area -->
+        <main class="content">
+            <header class="content-header">
+                <div class="breadcrumbs">
+                    <a href="index_en.html">Home</a> / Donation Section
+                </div>
+                 <div class="language-switcher">
+                    <a href="bagis.html">TR</a> | <span>EN</span>
+                </div>
+            </header>
+
+            <!-- SECTION TITLE -->
+            <h2><span class="heading-icon">💰</span> Donation Section</h2>
+
+            <!-- Description Paragraph (Outside box) -->
+             <p style="margin-bottom: 30px; color: var(--text-secondary);">
+                If you'd like to support the development of Dominion of States, you can use the methods below. Thank you for your support!
+            </p>
+
+            <!-- =============================================== -->
+            <!-- TURKEY DONATION BOX                             -->
+            <!-- =============================================== -->
+           
+            <!-- =============================================== -->
+            <!-- / TURKEY DONATION BOX                          -->
+            <!-- =============================================== -->
+
+            <!-- =============================================== -->
+            <!-- GLOBAL DONATION BOX                            -->
+            <!-- =============================================== -->
+            <div class="content-box">
+                <h3><span class="heading-icon">🌍</span> Global Donation Method</h3>
+                 <p style="color: var(--text-main); margin-bottom: 20px;">You can support using USDT (Tether) via the TRC20 network.</p>
+                <button class="donate-button" onclick="toggleDetails('global-details')">Click for Details</button>
+                <div id="global-details" class="donation-details" style="display: none;">
+                    <p>You can support the development of the game using USDT (Tether) via the TRC20 network:</p>
+                    <blockquote>
+                        <strong>USDT (TRC20) Wallet Address:</strong><br>
+                        <span class="wallet-address">TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g</span>
+                        <button class="copy-button" onclick="copyAddress('TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g')">Copy Address</button>
+                    </blockquote>
+                    <p><small>(Please double-check that the network is TRC20 before sending)</small></p>
+                    <p><strong>Why do we use USDT instead of PayPal or Stripe?</strong><br>
+Because I live in Turkey and unfortunately cannot use PayPal or Stripe. So I found this as an alternative solution. Thank you for your understanding.</p>
+                    <p>Even a small donation is very helpful and motivates me. Thank you very much for your support!</p>
+                    <p>- Fatihilecs</p>
+                </div>
+            </div>
+            <!-- =============================================== -->
+            <!-- / GLOBAL DONATION BOX                          -->
+            <!-- =============================================== -->
+
+        </main>
+        <!-- / Right Content Area -->
+
+    </div> <!-- End of .container -->
+
+    <!-- Script Section (Unchanged) -->
+    <script>
+        function toggleDetails(id) {
+            var allDetails = document.querySelectorAll('.donation-details');
+            var targetDetails = document.getElementById(id);
+            allDetails.forEach(function(details) {
+                if (details.id !== id && details.style.display === 'block') {
+                    details.style.display = 'none';
+                }
+            });
+            if (targetDetails.style.display === 'none' || targetDetails.style.display === '') {
+                targetDetails.style.display = 'block';
+            } else {
+                targetDetails.style.display = 'none';
+            }
+        }
+        function copyAddress(address) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(address).then(function() {
+                    alert('Information copied to clipboard!');
+                }, function(err) {
+                    console.error('Could not copy info: ', err);
+                    alert('Could not copy. Please copy manually.');
+                });
+            } else {
+                 try {
+                     var textArea = document.createElement("textarea");
+                     textArea.value = address;
+                     textArea.style.position = "fixed";
+                     textArea.style.left = "-9999px";
+                     document.body.appendChild(textArea);
+                     textArea.focus();
+                     textArea.select();
+                     document.execCommand('copy');
+                     document.body.removeChild(textArea);
+                     alert('Information copied to clipboard! (Fallback)');
+                 } catch (err) {
+                    console.error('Fallback copy failed: ', err);
+                    alert('Copying is not supported or failed. Please copy manually.');
+                 }
+            }
+        }
+    </script>
+    <!-- / Script Section -->
+
+</body>
+</html>

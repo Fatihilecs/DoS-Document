@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bağış Yap - Dominion of States</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Sol Menü (Sidebar) -->
+        <aside class="sidebar">
+<!-- BU BÖLÜMÜ EKLE -->
+        <div class="logo-area">
+            <img src="https://r.resimlink.com/yjsxOhnqfew.png" alt="Dominion of States Logosu" id="site-logo">
+    <!-- Eğer logo altında Dökümantasyon yazısı istersen buraya <p class="sidebar-subtitle">Dökümantasyon</p> ekleyebilirsin -->
+        </div>
+<!-- / BU BÖLÜMÜ EKLE -->
+
+            
+            <nav class="navigation">
+                <ul>
+                    <li><a href="hakkinda.html">▶ OYUN HAKKINDA</a></li>
+                    <li><a href="sss.html">▶ SIKÇA SORULAN SORULAR</a></li>
+                    <li><a href="gelistirici.html">▶ GELİŞTİRİCİ</a></li>
+                    <li><a href="haberler.html">▶ HABERLER</a></li>
+                    <li><a href="bagis.html">▶ BAĞIŞ YAP</a></li>
+                    <li><a href="guncelleme.html">▶ GÜNCELLEMELER</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <span>v: 1.1</span>
+            </div>
+        </aside>
+        <!-- / Sol Menü (Sidebar) -->
+
+        <!-- Sağ İçerik Alanı -->
+        <main class="content">
+                        <header class="content-header">
+                <div class="breadcrumbs">
+                    <a href="index.html">Ana Sayfa</a> / Bağış Bölümü
+                </div>
+                 <div class="language-switcher">
+                    <span>TR</span> | <a href="bagis_en.html">EN</a>
+                </div>
+            </header>
+
+            <!-- BÖLÜM BAŞLIĞI -->
+            <h2><span class="heading-icon">💰</span> Bağış Bölümü</h2>
+
+            <!-- Açıklama Paragrafı (Kutu dışında) -->
+             <p style="margin-bottom: 30px; color: var(--text-secondary);">
+                Dominion of States'in gelişimini desteklemek isterseniz aşağıdaki yöntemleri kullanabilirsiniz. Desteğiniz için teşekkür ederiz!
+            </p>
+
+            <!-- =============================================== -->
+            <!-- TÜRKİYE BAĞIŞ SEÇENEĞİ KUTUSU                -->
+            <!-- =============================================== -->
+            <div class="content-box">
+                <h3><span class="heading-icon">🇹🇷</span> Türkiye İçin Bağış Yöntemi</h3> <!-- İkonlu H3 Başlık -->
+                <p style="color: var(--text-main); margin-bottom: 20px;">Papara kullanarak destek olabilirsiniz.</p> <!-- Kısa açıklama -->
+                <button class="donate-button" onclick="toggleDetails('turkiye-details')">Detaylar İçin Tıkla</button>
+                <!-- Türkiye detayları (Gizli) -->
+                <div id="turkiye-details" class="donation-details" style="display: none;">
+                   <!-- İçerik aynı kalıyor -->
+                    <p>Aşağıdaki Papara numarasına bağış yapabilirsiniz:</p>
+                    <blockquote>
+                        <strong>Papara Numarası:</strong><br>
+                        <span class="wallet-address">2076300064</span>
+                        <button class="copy-button" onclick="copyAddress('2076300064')">Numarayı Kopyala</button>
+                    </blockquote>
+                    <p><strong>Açıklama:</strong> Destek – Dominion of States</p>
+                    <p>Yapacağınız en küçük katkı bile oyunun gelişimine büyük destek olur. Teşekkür ederim!</p>
+                    <p>— Fatihilecs</p>
+                </div>
+            </div>
+            <!-- =============================================== -->
+            <!-- / TÜRKİYE BAĞIŞ SEÇENEĞİ KUTUSU               -->
+            <!-- =============================================== -->
+
+
+            <!-- =============================================== -->
+            <!-- GLOBAL BAĞIŞ SEÇENEĞİ KUTUSU                 -->
+            <!-- =============================================== -->
+            <div class="content-box">
+                <h3><span class="heading-icon">🌍</span> Global Bağış Yöntemi</h3> <!-- İkonlu H3 Başlık -->
+                 <p style="color: var(--text-main); margin-bottom: 20px;">TRC20 ağı üzerinden USDT (Tether) kullanarak destek olabilirsiniz.</p> <!-- Kısa açıklama -->
+                <button class="donate-button" onclick="toggleDetails('global-details')">Detaylar İçin Tıkla</button>
+                 <!-- Global detayları (Gizli) -->
+                <div id="global-details" class="donation-details" style="display: none;">
+                    <!-- İçerik aynı kalıyor -->
+                    <p>Oyunun gelişimini desteklemek için TRC20 ağı üzerinden USDT (Tether) kullanabilirsiniz:</p>
+                    <blockquote>
+                        <strong>USDT (TRC20) Cüzdan Adresi:</strong><br>
+                        <span class="wallet-address">TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g</span>
+                        <button class="copy-button" onclick="copyAddress('TBT5qRxWdiVnww86Ga7mk2RsvCeFvWE53g')">Adresi Kopyala</button>
+                    </blockquote>
+                    <p><small>(Lütfen göndermeden önce ağın TRC20 olduğunu iki kez kontrol edin)</small></p>
+                    <p><strong>Neden PayPal veya Stripe yerine USDT kullanıyoruz?</strong><br>
+Çünkü Türkiye'de yaşıyorum ve maalesef PayPal veya Stripe kullanamıyorum. Bu yüzden bunu alternatif bir çözüm olarak buldum. Anlayışınız için teşekkür ederim.</p>
+                    <p>Küçük bir bağış bile çok yardımcı oluyor ve beni motive ediyor. Desteğiniz için çok teşekkürler!</p>
+                    <p>- Fatihilecs</p>
+                </div>
+            </div>
+            <!-- =============================================== -->
+            <!-- / GLOBAL BAĞIŞ SEÇENEĞİ KUTUSU                -->
+            <!-- =============================================== -->
+
+
+        </main>
+        <!-- / Sağ İçerik Alanı -->
+
+    </div> <!-- .container sonu -->
+
+    <!-- Script Bölümü (Aynı kalıyor) -->
+    <script>
+        function toggleDetails(id) {
+            var allDetails = document.querySelectorAll('.donation-details');
+            var targetDetails = document.getElementById(id);
+            allDetails.forEach(function(details) {
+                if (details.id !== id && details.style.display === 'block') {
+                    details.style.display = 'none';
+                }
+            });
+            if (targetDetails.style.display === 'none' || targetDetails.style.display === '') {
+                targetDetails.style.display = 'block';
+            } else {
+                targetDetails.style.display = 'none';
+            }
+        }
+        function copyAddress(address) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(address).then(function() {
+                    alert('Bilgi panoya kopyalandı!');
+                }, function(err) {
+                    console.error('Bilgi kopyalanamadı: ', err);
+                    alert('Bilgi kopyalanamadı. Lütfen manuel olarak kopyalayın.');
+                });
+            } else {
+                 try {
+                     var textArea = document.createElement("textarea");
+                     textArea.value = address;
+                     textArea.style.position = "fixed";
+                     textArea.style.left = "-9999px";
+                     document.body.appendChild(textArea);
+                     textArea.focus();
+                     textArea.select();
+                     document.execCommand('copy');
+                     document.body.removeChild(textArea);
+                     alert('Bilgi panoya kopyalandı! (Fallback)');
+                 } catch (err) {
+                    console.error('Fallback kopyalama başarısız: ', err);
+                    alert('Kopyalama desteklenmiyor veya başarısız oldu. Lütfen manuel olarak kopyalayın.');
+                 }
+            }
+        }
+    </script>
+    <!-- / Script Bölümü -->
+
+</body>
+</html>
+
+</body>
+</html>
